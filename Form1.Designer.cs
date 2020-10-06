@@ -122,8 +122,10 @@
             // 
             // txt_Senha
             // 
+            this.txt_Senha.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Senha.Enabled = false;
             this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Senha.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txt_Senha.Location = new System.Drawing.Point(7, 45);
             this.txt_Senha.Name = "txt_Senha";
             this.txt_Senha.Size = new System.Drawing.Size(187, 80);
@@ -336,7 +338,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(651, 29);
+            this.label3.Location = new System.Drawing.Point(679, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 19;
@@ -350,7 +352,7 @@
             this.list_histórico.ItemHeight = 18;
             this.list_histórico.Location = new System.Drawing.Point(629, 57);
             this.list_histórico.Name = "list_histórico";
-            this.list_histórico.Size = new System.Drawing.Size(168, 256);
+            this.list_histórico.Size = new System.Drawing.Size(215, 256);
             this.list_histórico.TabIndex = 20;
             // 
             // txt_saldo
@@ -381,7 +383,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(809, 321);
+            this.ClientSize = new System.Drawing.Size(853, 321);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.txt_saldo);
             this.Controls.Add(this.list_histórico);

@@ -14,7 +14,7 @@ namespace Nosso_Banco
     {
         int numeroSenha = 0;
         string[] senhas = new string[18];
-        string[] historico = new string[30];
+        string[] historico = new string[14];
         string senhaAtual;
         double saldo = 100;
         public Form1()
@@ -74,13 +74,7 @@ namespace Nosso_Banco
                 if (saldo > saque)
                 {
                     saldo -= saque;
-                    for (int i = 0; i < historico.Length - 1; i++)
-                        if (historico[i] == null)
-                        {
-                            if (saque > 0)
-                                historico[i] = senhaAtual + "  Saque  " + saque.ToString("###,##0.00");
-                            break;
-                        }
+                    GravarHistoricoSaque(saque);
                 }
                 else
                 {
@@ -104,13 +98,7 @@ namespace Nosso_Banco
                 else
                     deposito = double.Parse(txt_operações.Text);
                 saldo += deposito;
-                for (int i = 0; i < historico.Length - 1; i++)
-                    if (historico[i] == null)
-                    {
-                        if (deposito > 0)
-                            historico[i] = senhaAtual + "  Deposito  " + deposito.ToString("###,##0.00");
-                        break;
-                    }
+                GravarHistoricoDeposito(deposito);
                 txt_operações.Clear();
                 txt_operações.Focus();
                 txt_saldo.Text = saldo.ToString("###,##0.00");
@@ -151,6 +139,7 @@ namespace Nosso_Banco
         }
         private void GerarList_Historico()
         {
+            
             list_histórico.Items.Clear();
             for (int i = 0; i < historico.Length; i++)
                 if (historico[i] != null)
@@ -159,10 +148,52 @@ namespace Nosso_Banco
 
         private void GerarList_senha()
         {
+
             list_senhas.Items.Clear();
             for (int i = 0; i < senhas.Length; i++)
                 if (senhas[i] != null)
                     list_senhas.Items.Add((Environment.NewLine + senhas[i].ToString()));
+        }
+        private void GravarHistoricoDeposito(double deposito)
+        {
+            if (historico[historico.Length - 1] != null)
+            {
+                for (int i = 0; i < historico.Length; i++)
+                {
+                    if (i < historico.Length - 1)
+                        historico[i] = historico[i + 1];
+                    else
+                        historico[i] = null;
+                }
+            }
+            for (int i = 0; i < historico.Length; i++)
+                if (historico[i] == null)
+                {
+                    if (deposito > 0)
+                        historico[i] = senhaAtual + "  Deposito  " + deposito.ToString("R$ ###,##0.00");
+                    break;
+                }
+        }
+
+        private void GravarHistoricoSaque(double saque)
+        {
+            if (historico[historico.Length - 1] != null)
+            {
+                for (int i = 0; i < historico.Length; i++)
+                {
+                    if (i < historico.Length - 1)
+                        historico[i] = historico[i + 1];
+                    else
+                        historico[i] = null;
+                }
+            }
+            for (int i = 0; i < historico.Length; i++)
+                if (historico[i] == null)
+                {
+                    if (saque > 0)
+                        historico[i] = senhaAtual + "  Saque  " + saque.ToString("R$ ###,##0.00");
+                    break;
+                }
         }
         private int DefinePosicao(string[] vetor)
         {
