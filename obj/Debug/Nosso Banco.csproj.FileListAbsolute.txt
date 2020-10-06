@@ -1,0 +1,10 @@
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\bin\Debug\Nosso Banco.exe.config
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\bin\Debug\Nosso Banco.exe
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\bin\Debug\Nosso Banco.pdb
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso Banco.csprojAssemblyReference.cache
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso_Banco.Form1.resources
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso_Banco.Properties.Resources.resources
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso Banco.csproj.GenerateResource.cache
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso Banco.csproj.CoreCompileInputs.cache
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso Banco.exe
+C:\Users\rodri\source\repos\Nosso Banco\Nosso Banco\obj\Debug\Nosso Banco.pdb
